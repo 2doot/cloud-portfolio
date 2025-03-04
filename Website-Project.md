@@ -47,6 +47,16 @@ On further investigation I noticed this as well
 
 ![Best Sample](docs/assets/2025-03-04%20Project.jpg)
 
+## Further Research 
+
+After seeing the results of my generated website I researched other succcess with using LMS to produce basic HTML paages.
+The reccomendation was that results were inconsistent and that its better to just write HTML and CSS by hand.
+
+- [ChatGPT Isn't Good at Coding Websites](https://medium.com/@alexagboolacodes/chatgpt-sucks-at-coding-websites-86420daa32fb)
+- [5 Reasons you shouldn't use ChatGPT for...](https://good2bsocial.com/5-reasons-you-shouldnt-use-chatgpt-to-create-your-law-firms-website-content/) 
+
+so it is possible but quality, effort and time will greatly vary. 
+
 # Project Journal
 
 > Logging time based on hourly increments 0.5 =30 mins, 0.25 = 15 mins with 15 mins being smallest increment
@@ -54,7 +64,8 @@ On further investigation I noticed this as well
 - 2025-03-04 (0.25h) Implemented Top-Level Architectual Design 
 - 2025-03-04 (0.25h) Implemented Rough Design of Website 
 - 2025-03-04 (0.25h) Improving Sceenshot Efficienft for rapid journaling with GreenShot
-- 2025-03-04 (0.5h) Working with ChatGPT prompt to produce adequate results. 
+- 2025-03-04 (0.75h) Working with ChatGPT prompt to produce adequate results first attempt but subsequests attmep were in-efficient
+- 2025-03-04 (0.5h) Research ChhatGPT4-0 feasibility and every source recommended not to use ChatGPT.
 
 
 # Obstacles and Results
