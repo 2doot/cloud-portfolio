@@ -20,6 +20,11 @@ Its important that I utilized a Cloud Service Provider (CSPs) solution.
 
 I think I can utilize ChatGPT or a similar service to quickly design our website. 
 
+- you need to feed the design of the page one at a time, but it does produce results
+
+### prompts used
+> I am building a portfolio website to showcase my techonology skills. I would like to create HTML markup and CSS for the designs provides. Please use flexbox and dont use absolutes or fixed values. 
+
 
 # Project Journal
 
