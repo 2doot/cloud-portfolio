@@ -55,7 +55,14 @@ The reccomendation was that results were inconsistent and that its better to jus
 - [ChatGPT Isn't Good at Coding Websites](https://medium.com/@alexagboolacodes/chatgpt-sucks-at-coding-websites-86420daa32fb)
 - [5 Reasons you shouldn't use ChatGPT for...](https://good2bsocial.com/5-reasons-you-shouldnt-use-chatgpt-to-create-your-law-firms-website-content/) 
 
+
 so it is possible but quality, effort and time will greatly vary. 
+
+# Building Website HTML from scratch 
+
+I am using Flex CSS and modern HTML5 tags as much as I can for the HTML and CSS.
+
+[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 # Project Journal
 
@@ -66,6 +73,7 @@ so it is possible but quality, effort and time will greatly vary.
 - 2025-03-04 (0.25h) Improving Sceenshot Efficienft for rapid journaling with GreenShot
 - 2025-03-04 (0.75h) Working with ChatGPT prompt to produce adequate results first attempt but subsequests attmep were in-efficient
 - 2025-03-04 (0.5h) Research ChhatGPT4-0 feasibility and every source recommended not to use ChatGPT.
+- 2025-03-04 (1h) WIP Partially Implemented homepage layout using flex css
 
 
 # Obstacles and Results
