@@ -1,3 +1,4 @@
+/* Default Layout =========================================================== */
 /*
   *- All elements in our html 
 Border-Box: Make it so width and height is always the entered amount 
@@ -43,29 +44,6 @@ header {
   gap: 12px; 
 }
  
-header section {
-  flex-grow: 1;
-}
-
-header nav {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 12px; 
-}
-
-header nav a {
-  cursor: pointer; 
-  background: rgb(120,120,120);
-  color: rgb(0,0,0);
-  text-decoration: none;
-  padding: 12px;
-  border-radius: 4px;
-}
-
-header nav a:hover{
-  background: rgb(100,100,100);
-}
 
 article {
   background: rgb(255,255,255); 
@@ -76,6 +54,7 @@ footer {
   padding: 16px;
 }
 
+/* POPUP COMPONENT=========================================================== */
 .popup {
   display: none;
   background: rgba(0,0,0,0.4);
@@ -135,7 +114,32 @@ footer {
   height: 24px;
 }
 
-.thumbnail {
+/* PROJECTS INDEX=========================================================== */
+body[location='projects_index']header section {
+  flex-grow: 1;
+}
+
+body[location='projects_index']header nav {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 12px; 
+}
+
+body[location='projects_index']header nav a {
+  cursor: pointer; 
+  background: rgb(120,120,120);
+  color: rgb(0,0,0);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+body[location='projects_index']header nav a:hover{
+  background: rgb(100,100,100);
+}
+
+body[location='projects_index'] .thumbnail {
   width: 400px;
   aspect-ratio: 16 / 9;
   background: rgb(255,0,0);
@@ -144,7 +148,7 @@ footer {
   align-items: center;
 }
 
-.thumbnail .icon.play {
+body[location='projects_index'] .thumbnail .icon.play {
   background: url(/assets/play.svg); 
   background-repeat: no-repeat; 
   background-size: contain;
@@ -152,13 +156,19 @@ footer {
   height: 128px;
 }
 
-article nav {
+
+body[location='projects_index'] article nav {  
   display: flex;
   flex-wrap: wrap; 
   padding: 12px; 
 }
 
-article nav a {
+
+body[location='projects_index'] article nav p {  
+  margin: 0px;
+}
+
+body[location='projects_index'] article nav a {
   display: flex; 
   flex-direction: column;
   gap: 8px;
@@ -169,21 +179,79 @@ article nav a {
   cursor: pointer; 
 }
 
-article nav p{
-  margin: 0px;
-}
-
-article nav a img {
+body[location='projects_index'] article nav a img {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
-article nav .button {
+body[location='projects_index'] article nav .button {
   background:rgb(120,120,120);
   padding: 12px;
   border-radius: 8px;
   align-self: center; 
 }
-article nav a:hover .button { 
+body[location='projects_index'] article nav a:hover .button { 
   background: rgb(100,100,100); 
+}
+
+/* PROJECTS SHOW=========================================================== */
+body[location='projects_show'] header {
+  flex-direction: column; 
+}
+
+body[location='projects_show'] header .breadcrumbs a {
+  color: rgb(0,0,200);
+  font-weight: 600;
+}
+
+body[location='projects_show'] section {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+body[location='projects_show'] .carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+body[location='projects_show'] .carousel .thumbnail{
+  aspect-ratio: 16 / 9;
+  background: rgb(255,0,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body[location='projects_show'] .carousel .bar{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body[location='projects_show'] .carousel .small_thumbnail{
+  width: 128px;
+  background: rgb(255,0,100);
+}
+
+body[location='projects_show'] header nav {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 12px; 
+}
+
+body[location='projects_show'] header nav a {
+  cursor: pointer; 
+  background: rgb(120,120,120);
+  color: rgb(0,0,0);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+body[location='projects_show']header nav a:hover {
+  background: rgb(100,100,100);
 }
