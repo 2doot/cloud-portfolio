@@ -64,6 +64,10 @@ I am using Flex CSS and modern HTML5 tags as much as I can for the HTML and CSS.
 
 [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
+For palce holder images I use this website to generate images out:
+
+- [](https://placehold.co/) 
+
 # Project Journal
 
 > Logging time based on hourly increments 0.5 =30 mins, 0.25 = 15 mins with 15 mins being smallest increment
@@ -74,6 +78,7 @@ I am using Flex CSS and modern HTML5 tags as much as I can for the HTML and CSS.
 - 2025-03-04 (0.75h) Working with ChatGPT prompt to produce adequate results first attempt but subsequests attmep were in-efficient
 - 2025-03-04 (0.5h) Research ChhatGPT4-0 feasibility and every source recommended not to use ChatGPT.
 - 2025-03-04 (1h) WIP Partially Implemented homepage layout using flex css
+- 2025-03-04 (1h) WIP Implement Video Popup
 
 
 # Obstacles and Results

@@ -4,20 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <title>☁️📁Miguel Guzman's Portfolio Project</title>
+        <title>
+            ☁️📁Miguel Guzman's Portfolio Project
+        </title>
     </head>
     <body>
         <div class="popup intro_popup">
-            <iframe
-                    width="560" 
-                    height="315" 
+            <div class="video_wrap"> 
+                <div class ="close_button">
+                    <div class="icon close"></div>
+                    <span>close</span>
+                </div> 
+                <div class="video">
+                <iframe
+                    width="100%"
+                    height="100%"
                     src="https://www.youtube.com/embed/vPum23nSH5o?si=2ZiH_-k1drLQt7u_" 
                     title="Domo" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
-            </iframe>
-        </div><!--into_popup-->
+                </iframe>
+                </div><!-- video -->
+            </div><!-- video_wrap -->
+        </div><!-- intro_popup -->
 
         <main>
             <header>
@@ -30,19 +40,42 @@
                     <h1>Miguel Guzman</h1>
                     <p>A little bit about me....</p>
                 </section>
-
                 <nav>
-                    <a target="_blank" href="/files/miguel-guzman-resume.pdf">Download Resume (Pdf)</a>
+                    <a target="_blank" href="/files/miguel-guzman-resume.pdf">Download Resume (PDF)</a>
                     <a target="_blank" href="https://www.linkedin.com/in/miguel-guzman-852a82191">LinkedIn Profile</a>
                     <a target="_blank" href="https://github.com/2doot">View Github Profile</a>
                 </nav>
             </header>
             <article>
-                Hello article 
+                <nav>
+                    <a href="#">
+                            <img src="https://placehold.co/1920x1080" alt="Project 1">
+                            <h2>Multi-Cloud Portfolio Hosting</h2>
+                            <p>This project demostrates static website hosting in three different CSPs (GCP, Azure, and AWS)</p>
+                            <span class="button">
+                                View Project
+                            </span>
+                    </a>
+                </nav>
             </article>
             <footer>
                 Miguel Guzman's Cloud Portfolio ☁️💼 
             </footer>
-        </main> 
+        </main>
+        <script type="text/javascript">
+            const el_popup = document.getElementsByClassName("intro_popup")[0]
+
+            //popup the intro video
+            const el_thumbnail = document.getElementsByClassName("intro_thumbnail")[0]
+            el_thumbnail.addEventListener('click',function(){
+              el_popup.classList.add('pop')
+            })
+            //close the intro video 
+            const el_close = document.getElementsByClassName("close_button")[0]
+            el_close.addEventListener('click',function(){
+              el_popup.classList.remove('pop')
+            })
+
+        </script>
     </body>
 </html>
