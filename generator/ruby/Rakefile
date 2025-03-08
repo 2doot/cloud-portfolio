@@ -3,9 +3,9 @@ require_relative 'generator.rb'
 task :generate do 
   root_path = File.dirname File.expand_path('../..', __FILE__)
 
-  template_path = File.join(root_path,'generator','ruby','templates','portfolio-project.html')
+  template_path = File.join(root_path,'generator','ruby','templates','portfolio-project.html.erb')
   markdown_path = File.join(root_path,'generator','markdown','website-project.md')
-  output_path = File.join(root_path, 'public','projects/multi-cloud-portfolio-website.html')
+  output_path = File.join(root_path, 'public','projects', 'multi-cloud-portfolio-website.html')
   
   Generator.run(
     template_path: template_path,

@@ -255,3 +255,22 @@ body[location='projects_show'] header nav a {
 body[location='projects_show']header nav a:hover {
   background: rgb(100,100,100);
 }
+
+
+body[location='projects_show'] article {
+  padding: 24px;
+
+}
+
+body[location='projects_show'] .markdown a {
+  color: rgb(0,40,200);
+  font-weight: 600; 
+}
+
+body[location='projects_show'] .markdown h1,h2,h3 {
+  margin-top: 24px;
+}
+
+body[location='projects_show'] .markdown li {
+  line-height: 1.4em;
+}

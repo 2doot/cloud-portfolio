@@ -62,7 +62,7 @@ so it is possible but quality, effort and time will greatly vary.
 
 I am using Flex CSS and modern HTML5 tags as much as I can for the HTML and CSS.
 
-[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 For palce holder images I use this website to generate images out:
 
