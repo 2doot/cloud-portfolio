@@ -79,10 +79,41 @@ For palce holder images I use this website to generate images out:
 - 2025-03-04 (0.5h) Research ChhatGPT4-0 feasibility and every source recommended not to use ChatGPT.
 - 2025-03-04 (1h) WIP Partially Implemented homepage layout using flex css
 - 2025-03-04 (1h) WIP Implement Video Popup
-
+- 2025-03-08 (0.5h) Implement HTML Template for Portfolio Page 
+- 2025-03-08 (1h) Implement Dynamic Templating with Ruby Erb
+- 2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja 
 
 # Obstacles and Results
 
 ## Draw.io 
 
 I decided to implement our architectual diagrams in Draw.io due to its free use. It has all architecual icons for all major cloud service proviers. Software was difficult to utilized efficiently. For better results I would use Lucid Charts, It will greatly be more time efficient. 
+
+## Rendering HTML Templating 
+
+In this project I've implemented rendering markdown and embedding the output HTML into a HTML templating langauge.
+
+I've implemented this solution in three languages: 
+
+| Lang | Markdown | Templating | Task Manager | 
+|---|---|---|---|
+| Ruby | Redcarpet | ERB | Rake | 
+| Python | Markdown | Jinja | Invoke | 
+| Node.js | ... | ... | Npm |
+ 
+
+### Ruby Generator 
+
+```sh
+cd generator/ruby
+bundle install
+bundle exec rake generate
+```   
+
+### Python Generator 
+
+```sh
+cd generator/python
+pip install -r requirements.txt
+invoke generate 
+```

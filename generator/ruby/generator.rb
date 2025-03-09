@@ -20,9 +20,6 @@ class Generator
     contents_html = self.markdown_to_html markdown_path
     html = self.render_erb_to_html template_path, contents_html
     self.ouput_file output_path, html 
-    
-    # convert markdown to html
-    # render the converted html into a template
   end
 
   def self.markdown_to_html markdown_path
