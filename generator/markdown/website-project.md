@@ -82,7 +82,7 @@ For palce holder images I use this website to generate images out:
 - 2025-03-08 (0.5h) Implement HTML Template for Portfolio Page 
 - 2025-03-08 (1h) Implement Dynamic Templating with Ruby Erb
 - 2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja 
-
+- 2025-03-10 (0.75h) Port Dynamic Templating over to Nodejs using EJS
 # Obstacles and Results
 
 ## Draw.io 
@@ -99,7 +99,7 @@ I've implemented this solution in three languages:
 |---|---|---|---|
 | Ruby | Redcarpet | ERB | Rake | 
 | Python | Markdown | Jinja | Invoke | 
-| Node.js | ... | ... | Npm |
+| Node.js | Marked | EJS | Npm |
  
 
 ### Ruby Generator 

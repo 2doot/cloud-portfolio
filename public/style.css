@@ -44,6 +44,29 @@ header {
   gap: 12px; 
 }
  
+header section {
+  flex-grow: 1; 
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 12px;
+}
+
+header nav a {
+  cursor: pointer;
+  background: rgb(120,120,120);
+  color: rgb(0,0,0);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+header nav a:hover {
+  background: rgb(100,100,100);
+}
 
 article {
   background: rgb(255,255,255); 
