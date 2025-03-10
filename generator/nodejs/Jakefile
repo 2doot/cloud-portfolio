@@ -1,0 +1,13 @@
+const path = require("path");
+const { task } = require('jake');
+const { Generator } = require('./generator.js');
+
+task('generate', function () {
+  const root_path = path.resolve("../..");
+
+  const template_path = path.resolve(root_path, 'generator', 'nodejs', 'templates', 'portfolio-project.html.ejs');
+  const markdown_path = path.resolve(root_path, 'generator', 'markdown', 'website-project.md');
+  const output_path = path.resolve(root_path, 'public', 'projects', 'multi-cloud-portfolio-website.html');
+
+  Generator.run(template_path, markdown_path, output_path);
+});
