@@ -83,6 +83,39 @@ For palce holder images I use this website to generate images out:
 - 2025-03-08 (1h) Implement Dynamic Templating with Ruby Erb
 - 2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja 
 - 2025-03-10 (0.75h) Port Dynamic Templating over to Nodejs using EJS
+- 2025-03-10 (0.75h) AWS Architecture and Partial Price Calculation
+
+## Cost Analysis
+
+
+### AWS 
+
+
+ #### S3 Standard Storage Charge  ($0 - $0.23 USD / month)
+
+   - AWS offers different tiers of storage. since my website is intended for frequent access I will need to utilized s3 Standard tier. My website is unlikely to exceed 1GB of storage.
+   - Larger file such as project files will be stored in GitHub. Videos will be uploaded to youtube, so I will be simply storing HTML, CSS and images. 
+   - I'll ensure I optimize our images sizes AWS Charges $0.023 per GB for the first 50 GB. 
+   - In 2024 AWS offers 5 GBs of storage for free in S3. I am able to utilize the free tier so my charge should be 0 or at worst case $0.23 USD 
+
+### S3 Data Retrieval Charges ($0 - $0.0054 USD / month)
+- AWS charges for Data Retrieval eg. GET, POST, COPY
+- When I upload my website and assets to an s3 Bucket that will utlize API calls such PUT
+- When users request html, css and other assets, the API call GET will be used.
+- I will be placing a caching layer infront of my website utilzing CloudFront CDN so not all calls will be made to my S3 Bucket
+- I should expect Get requestss of less than 2000 requests per month (this is determined how people frequent the website and how many assets wthey will view)
+- I should expect PUT requests less than 500 per quarter. (This is determined how often I update the website)
+- AWS charges $0.005 per 1000 requests eg. PUT, COPY, POST, LIST requests
+- AWS charges $0.004 per 1000 requests eg. GET, SELECT,and all other requests
+- AWS has a free-tier for Data Retrieval 20,000 GET requests; 2,000 PUT, COPY, POST, or LIST Requests; and 100 GB of Data Transfer Out each month, 
+- Since i'll be within the free tier I should expect a cost of 0 or a worst case $0.005 USD 
+
+TODO 
+- Cloud Front Distribution Costs
+- Route53 Hosted Zone Costs
+- CodeBuild Server Costs
+- AWS Lambda Costs
+
 # Obstacles and Results
 
 ## Draw.io 
