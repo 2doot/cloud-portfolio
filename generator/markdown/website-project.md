@@ -116,7 +116,28 @@ TODO
 - CodeBuild Server Costs
 - AWS Lambda Costs
 
+
+## Azure
+
+### DNS Zone Outbond Data Transfers Charge $0.081
+
+- $0.081 per GB First 10 TB /Month for Network Standard
+- Azure has multiple tiers of delivery we'll utilize the standard which is the most effective
+- We don't expect to exceed 1GB per month so we are likely looking at the minimum charge.
+
+TODO 
+- DNS Zone Pricing
+- Azure CDN
+- Storage Accounts Pricing
+- Github Actions
+- Azure Serverless Fucntions 
+
+
 # Obstacles and Results
+
+## Subdomain Delegation
+
+There is a technical uncertainty around wheter a domain's subdomains can be managed by different DNS servers. The term appears to be called subdomain delegation. My use case is to have a main domain, and the subdomain of aws. azure gcp. and allow hosted zone in the target CSP manage it.
 
 ## Draw.io 
 
