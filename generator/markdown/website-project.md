@@ -98,7 +98,7 @@ For palce holder images I use this website to generate images out:
    - I'll ensure I optimize our images sizes AWS Charges $0.023 per GB for the first 50 GB. 
    - In 2024 AWS offers 5 GBs of storage for free in S3. I am able to utilize the free tier so my charge should be 0 or at worst case $0.23 USD 
 
-### S3 Data Retrieval Charges ($0 - $0.0054 USD / month)
+#### S3 Data Retrieval Charges ($0 - $0.0054 USD / month)
 - AWS charges for Data Retrieval eg. GET, POST, COPY
 - When I upload my website and assets to an s3 Bucket that will utlize API calls such PUT
 - When users request html, css and other assets, the API call GET will be used.
@@ -110,14 +110,35 @@ For palce holder images I use this website to generate images out:
 - AWS has a free-tier for Data Retrieval 20,000 GET requests; 2,000 PUT, COPY, POST, or LIST Requests; and 100 GB of Data Transfer Out each month, 
 - Since i'll be within the free tier I should expect a cost of 0 or a worst case $0.005 USD 
 
-TODO 
-- Cloud Front Distribution Costs
-- Route53 Hosted Zone Costs
-- CodeBuild Server Costs
-- AWS Lambda Costs
+#### CloudFront Distribution Costs
 
+- AWS CloudFront is a content delivery network (CDN) that caches content closer to users to reduce latency and S3 retrieval costs.
+- The free tier includes 1 TB of data transfer out and 10 million HTTP/HTTPS requests per month.
+- I expect my website traffic to stay within the free limits, so my cost should be $0.
+- If traffic spikes, costs start at $0.085 per GB for the first 10 TB.
+
+#### Route53 Hosted Zone Costs
+
+- AWS Route53 provides domain name system (DNS) services to route users to my website.
+- Hosting a domain costs $0.50 per hosted zone per month.
+- I only need one hosted zone, so I should expect $0.50 per month.
+
+#### CodeBuild Server Costs
+
+- WS CodeBuild compiles source code, runs tests, and produces software packages.
+- The free tier includes 100 build minutes per month with general-purpose Linux, small instance.
+- My usage is minimal, so I expect to stay within the free tier and incur $0 costs.
+- If I exceed the free tier, costs start at $0.005 per build minute.
+
+#### AWS Lambda Costs
+
+- AWS Lambda runs code in response to events and automatically manages the compute resources.
+- The free tier includes 1 million requests and 400,000 GB-seconds of compute time per month.
+- My website’s Lambda usage will be minimal (e.g., for contact form handling), so I expect to stay within the free tier.
+- Beyond the free tier, costs are $0.20 per 1 million requests plus $0.00001667 per GB-second.
 
 ## Azure
+
 
 ### DNS Zone Outbond Data Transfers Charge $0.081
 
@@ -125,15 +146,73 @@ TODO
 - Azure has multiple tiers of delivery we'll utilize the standard which is the most effective
 - We don't expect to exceed 1GB per month so we are likely looking at the minimum charge.
 
-TODO 
-- DNS Zone Pricing
-- Azure CDN
-- Storage Accounts Pricing
-- Github Actions
-- Azure Serverless Fucntions 
+#### DNS Zone Pricing ($0.50 per zone/month)
 
+- Azure charges a flat fee for hosting DNS zones.
+- The standard pricing is $0.50 per zone per month.
+- Since we’ll only need one DNS zone, we can expect a fixed monthly charge of $0.50.
+
+#### Azure CDN Charges ($0.087 - $0.16 per GB)
+
+- Azure CDN charges based on the region and data transfer volume.
+- For North America and Europe, prices start at $0.087 per GB for the first 10 TB.
+- With expected low traffic and caching, our costs should stay minimal, potentially under $1.
+
+#### Storage Accounts Pricing (Starting at $0.018 per GB)
+
+- Azure Storage offers various tiers; we’ll use the Standard tier for HTML, CSS, and assets.
+- The cost starts at $0.018 per GB for hot storage.
+- With a small website, we estimate storage needs of 1-2 GB, leading to costs of $0.02 - $0.04.
+
+#### GitHub Actions (Included in Free Tier or Pay-as-You-Go)
+
+- GitHub Actions can run CI/CD workflows with Azure integrations.
+- Free tier includes 2,000 minutes per month for public repositories.
+- For minimal usage, we expect to stay within the free tier, resulting in $0 cost.
+
+#### Azure Serverless Functions ($0.20 per million executions)
+
+- Azure Functions allow running serverless code in response to events.
+- The first million executions are free, and it’s $0.20 per million after that.
+- Given light usage, we expect either $0 or a minimal cost well under $1.
+
+### GCP
+
+#### Cloud Storage Charges ($0 - $0.02 USD / GB per month)
+
+- GCP offers multiple storage classes. For frequently accessed data, we’ll use Standard Storage.
+- Standard Storage costs $0.02 per GB, but GCP offers 5 GB of free storage.
+- Since we expect to stay within the free tier, our storage cost should be $0 or, at most, $0.10 for 5 GB.
+- Cloud DNS Charges ($0.40 USD / month per zone)
+
+#### GCP charges $0.40 per month for each managed zone.
+
+- DNS queries are charged at $0.40 per million queries.
+- For low-traffic sites, costs should stay around $0.40 per month.
+
+#### Cloud CDN Charges ($0 - $0.08 USD / GB)
+
+- Using GCP’s CDN reduces latency and lowers data transfer costs.
+- Pricing starts at $0.08 per GB, but the first 1 GB is free.
+- For light usage, costs should be minimal, around $0 - $0.08 monthly.
+
+#### Cloud Functions Charges ($0 - $0.40 USD / million invocations)
+
+- GCP provides 2 million free invocations per month.
+- Beyond the free tier, it costs $0.40 per million invocations.
+- For limited backend logic, we’ll likely stay within the free tier.
+
+#### Cloud Build Charges ($0 - $0.003 USD / build-minute)
+
+- GCP offers 120 build minutes free each day.
+- After that, it costs $0.003 per build-minute.
+- For small projects, build costs should be $0 or under $1 monthly.
 
 # Obstacles and Results
+
+## Subdomain Delegation
+
+There is technical uncvertainty around whether a domain's subdomains can be managed by different DNS servers. The term appears to be called subdomain delegation. My usecase is to have a main domaind, and  the a subdomain of aws. azure. gcp. and allow the hosted zone in the target CSP manage it. 
 
 ## Subdomain Delegation
 
