@@ -84,6 +84,7 @@ For palce holder images I use this website to generate images out:
 - 2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja 
 - 2025-03-10 (0.75h) Port Dynamic Templating over to Nodejs using EJS
 - 2025-03-10 (0.75h) AWS Architecture and Partial Price Calculation
+- 2025-03-23 (2h) WIP, Implemented Static WEbsite Hosting CFN template, have yet to deploy, does not contain domain name yet. 
 
 ## Cost Analysis
 
