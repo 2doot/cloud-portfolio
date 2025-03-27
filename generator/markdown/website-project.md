@@ -139,6 +139,8 @@ For palce holder images I use this website to generate images out:
 - My website’s Lambda usage will be minimal (e.g., for contact form handling), so I expect to stay within the free tier.
 - Beyond the free tier, costs are $0.20 per 1 million requests plus $0.00001667 per GB-second.
 
+TODO 
+- Secrets Manager to store PAT for GitHub
 ## Azure
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-STACK_NAME="build"
-TEMPLATE_PATH="CFN/build.yaml"
+STACK_NAME="creds"
+TEMPLATE_PATH="CFN/creds.yaml"
 
 aws cloudformation deploy \
   --template-file $TEMPLATE_PATH \
@@ -10,6 +10,4 @@ aws cloudformation deploy \
   --region us-east-1 \
   --no-execute-changeset \
   --parameter-overrides \
-  WWWDomain=www.miguelguzmanprojectportfolio.com \
-  SubDomain=projects.miguelguzmanprojectportfolio.com \
-  GitHubRepo='https://github.com/2doot/cloud-portfolio.git' 
+SecretStack=secrets
