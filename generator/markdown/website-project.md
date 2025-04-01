@@ -84,6 +84,9 @@ For palce holder images I use this website to generate images out:
 - 2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja 
 - 2025-03-10 (0.75h) Port Dynamic Templating over to Nodejs using EJS
 - 2025-03-10 (0.75h) AWS Architecture and Partial Price Calculation
+- 2025-03-23 (2h) WIP, Implemented Static WEbsite Hosting CFN template, have yet to deploy, does not contain domain name yet. 
+- 2025-03-25 (2h) Implemented and deploy Static Website Hosting. Marked up CFN template and codebuild yaml for build server. 
+- 2025-03-31 (4h) Getting my Codebuild CFN code to execute, had to implement secrets and credentials, spend a ton of time debugging Github Pemissions and fixing code. 
 
 ## Cost Analysis
 
@@ -137,6 +140,8 @@ For palce holder images I use this website to generate images out:
 - My website’s Lambda usage will be minimal (e.g., for contact form handling), so I expect to stay within the free tier.
 - Beyond the free tier, costs are $0.20 per 1 million requests plus $0.00001667 per GB-second.
 
+TODO 
+- Secrets Manager to store PAT for GitHub
 ## Azure
 
 
@@ -210,9 +215,22 @@ For palce holder images I use this website to generate images out:
 
 # Obstacles and Results
 
+## CodeBuild Lambda Runtime Enviroment
+
+As of Nov 2023 AWS Codebuild allows you to run your build server in the same runtime as a Lambda.
+This option is not available in ca-central-1 
+
 ## Subdomain Delegation
 
 There is technical uncvertainty around whether a domain's subdomains can be managed by different DNS servers. The term appears to be called subdomain delegation. My usecase is to have a main domaind, and  the a subdomain of aws. azure. gcp. and allow the hosted zone in the target CSP manage it. 
+
+The Lambda Runtime uses a smaller footprint (memory and compute) as in theory will build faster due to faster start up time. 
+
+If I wanted to use the Ruby generator, which I will likely want to use because it is best supported there in AWS, The Lambda Runtime is using Amazon Linux 2 instead of Amazon Linux 2023. AML does not come with AWS CLI pre-installed and I dont know if the Amazon Linux 2023 Lambda Runtime omits the AWS CLI (normally the AWS CLI is included). So I would have to do the SDK to upload files to s3. 
+
+Due to the amount of technical uncertainty and the fact it will my code between platform less uniform I am going to use traditional method such as a docker container and continue on in ca-central-1
+
+There is also ARM container available in us-east-1 but not in ca-central-1. In theory ARM should save pennies due to being more efficient, but for the frequency of our builds the savings is negligible.
 
 ## Subdomain Delegation
 
