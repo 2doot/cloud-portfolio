@@ -4,7 +4,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      ruby: 3.333
+      ruby: 3.3
   build:
     commands:
       ## ------ Install Packages
