@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+STACK_NAME="creds"
+TEMPLATE_PATH="CFN/creds.yaml"
+
+aws cloudformation deploy \
+  --template-file $TEMPLATE_PATH \
+  --stack-name $STACK_NAME \
+  --capabilities CAPABILITY_IAM \
+  --region us-east-1 \
+  --no-execute-changeset \
+  --parameter-overrides \
+SecretStack=secrets

@@ -1,0 +1,25 @@
+# https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      ruby: 3.3
+  build:
+    commands:
+      ## ------ Install Packages
+        - cd $CODEBUILD_SRC_DIR
+        - cd generator/ruby
+        - bundle install 
+        - bundle exec rake generate 
+        - ls $CODEBUILD_SRC_DIR/public
+  post_build:
+    commands:
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/index.html"  "s3://$WWWDOMAIN/index.html"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/style.css"  "s3://$WWWDOMAIN/style.css"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/assets/."  "s3://$WWWDOMAIN/assets/"
+
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/style.css"  "s3://$SUBDOMAIN/style.css"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/assets/."  "s3://$SUBDOMAIN/assets/"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects_assets/."  "s3://SUBDOMAIN/project_assets/"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects/."  "s3://SUBDOMAIN/projects/"

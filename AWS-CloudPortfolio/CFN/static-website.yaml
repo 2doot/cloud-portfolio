@@ -1,0 +1,89 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Static Website Hosting for Cloud Portfolio
+
+Parameters:
+  RootDomain:
+    Type: String
+    Description: Root domain name (e.g., example.com)
+  WWWDomain:
+    Type: String
+    Description: WWW domain name (e.g., www.example.com)
+  SubDomain:
+    Type: String
+    Description: Subdomain for specific projects (e.g., projects.example.com)
+
+Resources:
+  # Root Bucket (Redirects to WWW)
+  RootBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref RootDomain
+      WebsiteConfiguration:
+        RedirectAllRequestsTo:
+          HostName: !Ref WWWDomain
+
+  # WWW Bucket (Hosting Website)
+  WWWBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref WWWDomain
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+  # Subdomain Bucket (Hosting Projects)
+  SubDomainBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref SubDomain
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+  # CloudFront Origin Access Identity (OAI)
+  CloudFrontOAI:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: OAI for CloudFront access to S3
+
+  # CloudFront Distribution
+  MainDomainDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Origins:
+          - DomainName: !GetAtt WWWBucket.RegionalDomainName
+            Id: WWWBucketOrigin
+            S3OriginConfig:
+              OriginAccessIdentity: !Sub "origin-access-identity/cloudfront/${CloudFrontOAI}"
+        DefaultCacheBehavior:
+          TargetOriginId: WWWBucketOrigin
+          ViewerProtocolPolicy: redirect-to-https
+          AllowedMethods:
+            - GET
+            - HEAD
+          CachedMethods:
+            - GET
+            - HEAD
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+        ViewerCertificate:
+          CloudFrontDefaultCertificate: true
+        PriceClass: PriceClass_100
+
+  # S3 Bucket Policy for CloudFront
+  WWWBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WWWBucket
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              CanonicalUser: !GetAtt CloudFrontOAI.S3CanonicalUserId
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${WWWBucket}/*"

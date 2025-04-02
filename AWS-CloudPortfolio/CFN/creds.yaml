@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  PAT Secret and Credentials 
+Parameters:
+  SecretStack:
+    Type: String 
+Resources:
+  CodeBuildSourceCredential:
+    Type: AWS::CodeBuild::SourceCredential
+    Properties:
+      AuthType: PERSONAL_ACCESS_TOKEN
+      ServerType: GITHUB
+      Token: 
+        Fn::Join:
+          - ""
+          - - '{{resolve:secretsmanager:' 
+            - { "Fn::ImportValue": { "Fn::Sub": "${SecretStack}SecretName" } } 
+            - ':SecretString:token}}'
+Outputs:
+  CodeBuildSourceCredentialArn:
+    Description: Reference to CodeBuild SourceCredential
+    Value: !Ref CodeBuildSourceCredential
+    Export:
+      Name: !Sub "${AWS::StackName}CodeBuildSourceCredentialArn"
