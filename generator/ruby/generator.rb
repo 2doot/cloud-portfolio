@@ -33,9 +33,9 @@ class Generator
   def self.render_erb_to_html template_path, contents_html
     template= File.read template_path
     ns = Namespace.new(
-      contents: contents_html
+      contents: contents_html.force_encoding('UTF-8')
       )
-    html = ERB.new(template).result(ns.get_binding)
+    html = ERB.new(template.force_encoding('UTF-8')).result(ns.get_binding)
     return html 
   end
 
