@@ -215,6 +215,18 @@ TODO
 
 # Obstacles and Results
 
+## CodeBuild and Github Personal Access Token
+
+For GitHub PAT it might be the case that you cannot use Fine Grain permissions specifically  when using CodeBuild and a CodeStar Connection
+Its reported online that Fine Grain PATs can be used with CodePipeline when using Codebuild
+
+So we have to use Classic GitHub PAT even though it is more permessive. 
+
+## Ruby Encoding
+
+When running our Ruby Code on Amazon Linux 2023 our code was complaining about encoding.
+So we forced UTF-8 for my templates when being rendered for erb.
+
 ## CodeBuild Lambda Runtime Enviroment
 
 As of Nov 2023 AWS Codebuild allows you to run your build server in the same runtime as a Lambda.
