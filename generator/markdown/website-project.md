@@ -222,6 +222,8 @@ Its reported online that Fine Grain PATs can be used with CodePipeline when usin
 
 So we have to use Classic GitHub PAT even though it is more permessive. Edited* 
 
+[Update] After getting our Codebuild server to completely work we went back to see if we could use fine grain permissions token and it worked without issue. Online people are misreporting the functionality. 
+
 ## Ruby Encoding 
 
 When running our Ruby Code on Amazon Linux 2023 our code was complaining about encoding.
