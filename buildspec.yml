@@ -20,5 +20,5 @@ phases:
 
       - aws s3 cp "$CODEBUILD_SRC_DIR/public/style.css"  "s3://$SUBDOMAIN/style.css"
       - aws s3 cp "$CODEBUILD_SRC_DIR/public/assets/."  "s3://$SUBDOMAIN/assets/"
-      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects_assets/."  "s3://SUBDOMAIN/project_assets/"
-      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects/."  "s3://SUBDOMAIN/projects/"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects_assets/."  "s3://$SUBDOMAIN/project_assets/"
+      - aws s3 cp "$CODEBUILD_SRC_DIR/public/projects/."  "s3://$SUBDOMAIN/projects/"
