@@ -33,8 +33,12 @@ Resources:
                 Action:
                   - 's3:GetObject'
                   - 's3:PutObject'
-                Resource: '*'
-
+                  - 's3:ListObjectsV2'
+                Resource:
+                  - !Sub arn:aws:s3:::${WWWDomain}
+                  - !Sub arn:aws:s3:::${WWWDomain}/* 
+                  - !Sub arn:aws:s3:::${SubDomain}
+                  - !Sub arn:aws:s3:::${SubDomain}/*
   CodeBuildProject:
     Type: AWS::CodeBuild::Project
     Properties:
