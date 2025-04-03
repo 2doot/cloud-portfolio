@@ -222,7 +222,7 @@ Its reported online that Fine Grain PATs can be used with CodePipeline when usin
 
 So we have to use Classic GitHub PAT even though it is more permessive. 
 
-## Ruby Encoding
+## Ruby Encoding 
 
 When running our Ruby Code on Amazon Linux 2023 our code was complaining about encoding.
 So we forced UTF-8 for my templates when being rendered for erb.
