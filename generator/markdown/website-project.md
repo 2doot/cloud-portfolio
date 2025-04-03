@@ -220,7 +220,7 @@ TODO
 For GitHub PAT it might be the case that you cannot use Fine Grain permissions specifically  when using CodeBuild and a CodeStar Connection
 Its reported online that Fine Grain PATs can be used with CodePipeline when using Codebuild
 
-So we have to use Classic GitHub PAT even though it is more permessive. 
+So we have to use Classic GitHub PAT even though it is more permessive. Edited* 
 
 ## Ruby Encoding 
 

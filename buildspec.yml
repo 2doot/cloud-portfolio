@@ -12,7 +12,6 @@ phases:
         - cd generator/ruby
         - bundle install 
         - bundle exec rake generate 
-        - ls $CODEBUILD_SRC_DIR/public
   post_build:
     commands:
       - aws s3 cp "$CODEBUILD_SRC_DIR/public/index.html"  "s3://$WWWDOMAIN/index.html"
