@@ -19,7 +19,7 @@ Its important that I utilized a Cloud Service Provider (CSPs) solution.
 
 ## Hypothesis 
 
-I think I can utilize ChatGPT or a similar service to quickly design our website. 
+- I think I can utilize ChatGPT or a similar service to quickly design our website. 
 
 - you need to feed the design of the page one at a time, but it does produce results
 
