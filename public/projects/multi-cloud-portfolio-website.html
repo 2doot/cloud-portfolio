@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <title>Portfolio Project 1 - 📁Miguel Guzman's Portfolio</title>
+    </head>
+    <body location="projects_show">
+      <main>
+        <header>
+          <div class ="breadcrumbs">
+            <a href="/">All Projects</a>
+            <span class="divider">/</span>
+            <h1>Project Name</h1>
+          </div><!-- .breadcrumbs -->
+          <section>
+            <div class="carousel">
+              <div class="thumbnail main_thumbnail">
+              </div><!-- thumbnail -->
+              <div class="bar">
+                <div class="thumbnail small_thumbnail">
+                </div><!-- thumbnail -->
+                <div class="thumbnail small_thumbnail">
+                </div><!-- thumbnail -->
+                <div class="thumbnail small_thumbnail">
+                </div><!-- thumbnail -->
+              </div>
+            </div><!-- .carousel -->
+            <nav>
+              <a target="_blank" href="#">Launch Project</a>
+              <a target="_blank" href="https://github.com/2doot/cloud-portfolio">View Source Code</a>
+              <a target="_blank" href="#.pdf">Download Project Summary</a>
+          </nav>
+
+          </section>
+        </header>
+        <article> 
+        <div class="markdown">
+          <h1>Project Goals</h1>
+<p>The goal of this project is to have a website to hold all of my tech/cloud portfolio projects.
+Its important that I utilized a Cloud Service Provider (CSPs) solution. </p>
+<h1>Technology Stack</h1>
+<ul>
+<li>Draw.io (Diagramming)</li>
+<li>Github (Repo) and GitHub.dev (Static IDE)</li>
+<li>Gitpod.io (IDE)</li>
+<li>HTTP Server (Web Server) https://www.npmjs.com/package/http-server</li>
+<li>ChatGPT (Generating out HTML and CSS)</li>
+</ul>
+<h1>Project Planning</h1>
+<h2>Utilize ChatGPT to rapidly build HTML and CSS</h2>
+<h2>Hypothesis</h2>
+<p>I think I can utilize ChatGPT or a similar service to quickly design our website. </p>
+<ul>
+<li>you need to feed the design of the page one at a time, but it does produce results</li>
+</ul>
+<h4>prompts used</h4>
+<p><code>txt
+ I am building a portfolio website to showcase my techonology skills. I would like to create HTML markup and CSS for the designs provides. Please use flexbox and dont use absolutes or fixed values. I will provide you an image, and then I only wan the html back first. After I provided you all of my images, I will then ask for the css which will be applied to all pages.</code></p>
+<h5>Results</h5>
+<p>The first attempt did not produce adequate results.
+- the layout did not look correct</p>
+<p>On further investigation I noticed this as well 
+- the markup could have used more tags and less verbose
+- the css looked adequate, but there must be clear mistakes with the CSS </p>
+<ul>
+<li>Maybe we need to provide it more text and then the layout will work correctly</li>
+<li>Maybe we need to invest more time into our layout page</li>
+<li>Maybe we need to investigate the markup and css provide it bette instructions</li>
+<li>Maybe ChatGPT cannot adequately produce basic websites.</li>
+</ul>
+<p><img alt="Best Sample" src="docs/assets/2025-03-04%20Project.jpg" /></p>
+<h2>Further Research</h2>
+<p>After seeing the results of my generated website I researched other succcess with using LMS to produce basic HTML paages.
+The reccomendation was that results were inconsistent and that its better to just write HTML and CSS by hand.</p>
+<ul>
+<li><a href="https://medium.com/@alexagboolacodes/chatgpt-sucks-at-coding-websites-86420daa32fb">ChatGPT Isn't Good at Coding Websites</a></li>
+<li><a href="https://good2bsocial.com/5-reasons-you-shouldnt-use-chatgpt-to-create-your-law-firms-website-content/">5 Reasons you shouldn't use ChatGPT for...</a> </li>
+</ul>
+<p>so it is possible but quality, effort and time will greatly vary. </p>
+<h1>Building Website HTML from scratch</h1>
+<p>I am using Flex CSS and modern HTML5 tags as much as I can for the HTML and CSS.</p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+</ul>
+<p>For palce holder images I use this website to generate images out:</p>
+<ul>
+<li><a href="https://placehold.co/"></a> </li>
+</ul>
+<h1>Project Journal</h1>
+<blockquote>
+<p>Logging time based on hourly increments 0.5 =30 mins, 0.25 = 15 mins with 15 mins being smallest increment</p>
+</blockquote>
+<ul>
+<li>2025-03-04 (0.25h) Implemented Top-Level Architectual Design </li>
+<li>2025-03-04 (0.25h) Implemented Rough Design of Website </li>
+<li>2025-03-04 (0.25h) Improving Sceenshot Efficienft for rapid journaling with GreenShot</li>
+<li>2025-03-04 (0.75h) Working with ChatGPT prompt to produce adequate results first attempt but subsequests attmep were in-efficient</li>
+<li>2025-03-04 (0.5h) Research ChhatGPT4-0 feasibility and every source recommended not to use ChatGPT.</li>
+<li>2025-03-04 (1h) WIP Partially Implemented homepage layout using flex css</li>
+<li>2025-03-04 (1h) WIP Implement Video Popup</li>
+<li>2025-03-08 (0.5h) Implement HTML Template for Portfolio Page </li>
+<li>2025-03-08 (1h) Implement Dynamic Templating with Ruby Erb</li>
+<li>2025-03-08 (0.75h) Port Dynamic Templating over to python using Jinja </li>
+<li>2025-03-10 (0.75h) Port Dynamic Templating over to Nodejs using EJS</li>
+<li>2025-03-10 (0.75h) AWS Architecture and Partial Price Calculation</li>
+<li>2025-03-23 (2h) WIP, Implemented Static WEbsite Hosting CFN template, have yet to deploy, does not contain domain name yet. </li>
+<li>2025-03-25 (2h) Implemented and deploy Static Website Hosting. Marked up CFN template and codebuild yaml for build server. </li>
+<li>2025-03-31 (4h) Getting my Codebuild CFN code to execute, had to implement secrets and credentials, spend a ton of time debugging Github Pemissions and fixing code. </li>
+</ul>
+<h2>Cost Analysis</h2>
+<h3>AWS</h3>
+<p>#### S3 Standard Storage Charge  ($0 - $0.23 USD / month)</p>
+<ul>
+<li>AWS offers different tiers of storage. since my website is intended for frequent access I will need to utilized s3 Standard tier. My website is unlikely to exceed 1GB of storage.</li>
+<li>Larger file such as project files will be stored in GitHub. Videos will be uploaded to youtube, so I will be simply storing HTML, CSS and images. </li>
+<li>I'll ensure I optimize our images sizes AWS Charges $0.023 per GB for the first 50 GB. </li>
+<li>In 2024 AWS offers 5 GBs of storage for free in S3. I am able to utilize the free tier so my charge should be 0 or at worst case $0.23 USD </li>
+</ul>
+<h4>S3 Data Retrieval Charges ($0 - $0.0054 USD / month)</h4>
+<ul>
+<li>AWS charges for Data Retrieval eg. GET, POST, COPY</li>
+<li>When I upload my website and assets to an s3 Bucket that will utlize API calls such PUT</li>
+<li>When users request html, css and other assets, the API call GET will be used.</li>
+<li>I will be placing a caching layer infront of my website utilzing CloudFront CDN so not all calls will be made to my S3 Bucket</li>
+<li>I should expect Get requestss of less than 2000 requests per month (this is determined how people frequent the website and how many assets wthey will view)</li>
+<li>I should expect PUT requests less than 500 per quarter. (This is determined how often I update the website)</li>
+<li>AWS charges $0.005 per 1000 requests eg. PUT, COPY, POST, LIST requests</li>
+<li>AWS charges $0.004 per 1000 requests eg. GET, SELECT,and all other requests</li>
+<li>AWS has a free-tier for Data Retrieval 20,000 GET requests; 2,000 PUT, COPY, POST, or LIST Requests; and 100 GB of Data Transfer Out each month, </li>
+<li>Since i'll be within the free tier I should expect a cost of 0 or a worst case $0.005 USD </li>
+</ul>
+<h4>CloudFront Distribution Costs</h4>
+<ul>
+<li>AWS CloudFront is a content delivery network (CDN) that caches content closer to users to reduce latency and S3 retrieval costs.</li>
+<li>The free tier includes 1 TB of data transfer out and 10 million HTTP/HTTPS requests per month.</li>
+<li>I expect my website traffic to stay within the free limits, so my cost should be $0.</li>
+<li>If traffic spikes, costs start at $0.085 per GB for the first 10 TB.</li>
+</ul>
+<h4>Route53 Hosted Zone Costs</h4>
+<ul>
+<li>AWS Route53 provides domain name system (DNS) services to route users to my website.</li>
+<li>Hosting a domain costs $0.50 per hosted zone per month.</li>
+<li>I only need one hosted zone, so I should expect $0.50 per month.</li>
+</ul>
+<h4>CodeBuild Server Costs</h4>
+<ul>
+<li>WS CodeBuild compiles source code, runs tests, and produces software packages.</li>
+<li>The free tier includes 100 build minutes per month with general-purpose Linux, small instance.</li>
+<li>My usage is minimal, so I expect to stay within the free tier and incur $0 costs.</li>
+<li>If I exceed the free tier, costs start at $0.005 per build minute.</li>
+</ul>
+<h4>AWS Lambda Costs</h4>
+<ul>
+<li>AWS Lambda runs code in response to events and automatically manages the compute resources.</li>
+<li>The free tier includes 1 million requests and 400,000 GB-seconds of compute time per month.</li>
+<li>My website’s Lambda usage will be minimal (e.g., for contact form handling), so I expect to stay within the free tier.</li>
+<li>Beyond the free tier, costs are $0.20 per 1 million requests plus $0.00001667 per GB-second.</li>
+</ul>
+<p>TODO 
+- Secrets Manager to store PAT for GitHub</p>
+<h2>Azure</h2>
+<h3>DNS Zone Outbond Data Transfers Charge $0.081</h3>
+<ul>
+<li>$0.081 per GB First 10 TB /Month for Network Standard</li>
+<li>Azure has multiple tiers of delivery we'll utilize the standard which is the most effective</li>
+<li>We don't expect to exceed 1GB per month so we are likely looking at the minimum charge.</li>
+</ul>
+<h4>DNS Zone Pricing ($0.50 per zone/month)</h4>
+<ul>
+<li>Azure charges a flat fee for hosting DNS zones.</li>
+<li>The standard pricing is $0.50 per zone per month.</li>
+<li>Since we’ll only need one DNS zone, we can expect a fixed monthly charge of $0.50.</li>
+</ul>
+<h4>Azure CDN Charges ($0.087 - $0.16 per GB)</h4>
+<ul>
+<li>Azure CDN charges based on the region and data transfer volume.</li>
+<li>For North America and Europe, prices start at $0.087 per GB for the first 10 TB.</li>
+<li>With expected low traffic and caching, our costs should stay minimal, potentially under $1.</li>
+</ul>
+<h4>Storage Accounts Pricing (Starting at $0.018 per GB)</h4>
+<ul>
+<li>Azure Storage offers various tiers; we’ll use the Standard tier for HTML, CSS, and assets.</li>
+<li>The cost starts at $0.018 per GB for hot storage.</li>
+<li>With a small website, we estimate storage needs of 1-2 GB, leading to costs of $0.02 - $0.04.</li>
+</ul>
+<h4>GitHub Actions (Included in Free Tier or Pay-as-You-Go)</h4>
+<ul>
+<li>GitHub Actions can run CI/CD workflows with Azure integrations.</li>
+<li>Free tier includes 2,000 minutes per month for public repositories.</li>
+<li>For minimal usage, we expect to stay within the free tier, resulting in $0 cost.</li>
+</ul>
+<h4>Azure Serverless Functions ($0.20 per million executions)</h4>
+<ul>
+<li>Azure Functions allow running serverless code in response to events.</li>
+<li>The first million executions are free, and it’s $0.20 per million after that.</li>
+<li>Given light usage, we expect either $0 or a minimal cost well under $1.</li>
+</ul>
+<h3>GCP</h3>
+<h4>Cloud Storage Charges ($0 - $0.02 USD / GB per month)</h4>
+<ul>
+<li>GCP offers multiple storage classes. For frequently accessed data, we’ll use Standard Storage.</li>
+<li>Standard Storage costs $0.02 per GB, but GCP offers 5 GB of free storage.</li>
+<li>Since we expect to stay within the free tier, our storage cost should be $0 or, at most, $0.10 for 5 GB.</li>
+<li>Cloud DNS Charges ($0.40 USD / month per zone)</li>
+</ul>
+<h4>GCP charges $0.40 per month for each managed zone.</h4>
+<ul>
+<li>DNS queries are charged at $0.40 per million queries.</li>
+<li>For low-traffic sites, costs should stay around $0.40 per month.</li>
+</ul>
+<h4>Cloud CDN Charges ($0 - $0.08 USD / GB)</h4>
+<ul>
+<li>Using GCP’s CDN reduces latency and lowers data transfer costs.</li>
+<li>Pricing starts at $0.08 per GB, but the first 1 GB is free.</li>
+<li>For light usage, costs should be minimal, around $0 - $0.08 monthly.</li>
+</ul>
+<h4>Cloud Functions Charges ($0 - $0.40 USD / million invocations)</h4>
+<ul>
+<li>GCP provides 2 million free invocations per month.</li>
+<li>Beyond the free tier, it costs $0.40 per million invocations.</li>
+<li>For limited backend logic, we’ll likely stay within the free tier.</li>
+</ul>
+<h4>Cloud Build Charges ($0 - $0.003 USD / build-minute)</h4>
+<ul>
+<li>GCP offers 120 build minutes free each day.</li>
+<li>After that, it costs $0.003 per build-minute.</li>
+<li>For small projects, build costs should be $0 or under $1 monthly.</li>
+</ul>
+<h1>Obstacles and Results</h1>
+<h2>CodeBuild and Github Personal Access Token</h2>
+<p>For GitHub PAT it might be the case that you cannot use Fine Grain permissions specifically  when using CodeBuild and a CodeStar Connection
+Its reported online that Fine Grain PATs can be used with CodePipeline when using Codebuild</p>
+<p>So we have to use Classic GitHub PAT even though it is more permessive. Edited* </p>
+<p>[Update] After getting our Codebuild server to completely work we went back to see if we could use fine grain permissions token and it worked without issue. Online people are misreporting the functionality. </p>
+<h2>Ruby Encoding</h2>
+<p>When running our Ruby Code on Amazon Linux 2023 our code was complaining about encoding.
+So we forced UTF-8 for my templates when being rendered for erb.</p>
+<h2>CodeBuild Lambda Runtime Enviroment</h2>
+<p>As of Nov 2023 AWS Codebuild allows you to run your build server in the same runtime as a Lambda.
+This option is not available in ca-central-1 </p>
+<h2>Subdomain Delegation</h2>
+<p>There is technical uncvertainty around whether a domain's subdomains can be managed by different DNS servers. The term appears to be called subdomain delegation. My usecase is to have a main domaind, and  the a subdomain of aws. azure. gcp. and allow the hosted zone in the target CSP manage it. </p>
+<p>The Lambda Runtime uses a smaller footprint (memory and compute) as in theory will build faster due to faster start up time. </p>
+<p>If I wanted to use the Ruby generator, which I will likely want to use because it is best supported there in AWS, The Lambda Runtime is using Amazon Linux 2 instead of Amazon Linux 2023. AML does not come with AWS CLI pre-installed and I dont know if the Amazon Linux 2023 Lambda Runtime omits the AWS CLI (normally the AWS CLI is included). So I would have to do the SDK to upload files to s3. </p>
+<p>Due to the amount of technical uncertainty and the fact it will my code between platform less uniform I am going to use traditional method such as a docker container and continue on in ca-central-1</p>
+<p>There is also ARM container available in us-east-1 but not in ca-central-1. In theory ARM should save pennies due to being more efficient, but for the frequency of our builds the savings is negligible.</p>
+<h2>Subdomain Delegation</h2>
+<p>There is a technical uncertainty around wheter a domain's subdomains can be managed by different DNS servers. The term appears to be called subdomain delegation. My use case is to have a main domain, and the subdomain of aws. azure gcp. and allow hosted zone in the target CSP manage it.</p>
+<h2>Draw.io</h2>
+<p>I decided to implement our architectual diagrams in Draw.io due to its free use. It has all architecual icons for all major cloud service proviers. Software was difficult to utilized efficiently. For better results I would use Lucid Charts, It will greatly be more time efficient. </p>
+<h2>Rendering HTML Templating</h2>
+<p>In this project I've implemented rendering markdown and embedding the output HTML into a HTML templating langauge.</p>
+<p>I've implemented this solution in three languages: </p>
+<table>
+<thead>
+<tr>
+<th>Lang</th>
+<th>Markdown</th>
+<th>Templating</th>
+<th>Task Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ruby</td>
+<td>Redcarpet</td>
+<td>ERB</td>
+<td>Rake</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Markdown</td>
+<td>Jinja</td>
+<td>Invoke</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>Marked</td>
+<td>EJS</td>
+<td>Npm</td>
+</tr>
+</tbody>
+</table>
+<h3>Ruby Generator</h3>
+<p><code>sh
+cd generator/ruby
+bundle install
+bundle exec rake generate</code>   </p>
+<h3>Python Generator</h3>
+<p><code>sh
+cd generator/python
+pip install -r requirements.txt
+invoke generate</code></p>
+        </div>
+        </article>
+        <footer>
+          Miguel Guzman's Cloud Portfolio ☁️💼 
+        </footer>
+      </main>
+    </body>
+</html>

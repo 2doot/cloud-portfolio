@@ -264,7 +264,7 @@ I've implemented this solution in three languages:
 |---|---|---|---|
 | Ruby | Redcarpet | ERB | Rake | 
 | Python | Markdown | Jinja | Invoke | 
-| Node.js | Marked | EJS | Npm |
+| Node.js | Marked | EJS | Jake |
  
 
 ### Ruby Generator 
@@ -281,4 +281,14 @@ bundle exec rake generate
 cd generator/python
 pip install -r requirements.txt
 invoke generate 
+```
+
+### Nodejs Generator
+
+```sh
+cd generator/nodejs
+npm i ejs --save 
+npm install marked --save 
+npm install -g jake 
+jake generate 
 ```
