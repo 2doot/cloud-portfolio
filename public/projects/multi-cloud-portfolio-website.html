@@ -279,7 +279,7 @@ This option is not available in ca-central-1 </p>
 <td>Node.js</td>
 <td>Marked</td>
 <td>EJS</td>
-<td>Npm</td>
+<td>Jake</td>
 </tr>
 </tbody>
 </table>
@@ -293,6 +293,13 @@ bundle exec rake generate</code>   </p>
 cd generator/python
 pip install -r requirements.txt
 invoke generate</code></p>
+<h3>Nodejs Generator</h3>
+<p><code>sh
+cd generator/nodejs
+npm i ejs --save 
+npm install marked --save 
+npm install -g jake 
+jake generate</code></p>
         </div>
         </article>
         <footer>
