@@ -86,7 +86,9 @@ For palce holder images I use this website to generate images out:
 - 2025-03-10 (0.75h) AWS Architecture and Partial Price Calculation
 - 2025-03-23 (2h) WIP, Implemented Static WEbsite Hosting CFN template, have yet to deploy, does not contain domain name yet. 
 - 2025-03-25 (2h) Implemented and deploy Static Website Hosting. Marked up CFN template and codebuild yaml for build server. 
-- 2025-03-31 (4h) Getting my Codebuild CFN code to execute, had to implement secrets and credentials, spend a ton of time debugging Github Pemissions and fixing code. 
+- 2025-03-31 (4h) Getting my Codebuild CFN code to execute, had to implement secrets and credentials, spend a ton of time debugging Github Pemissions and fixing code.
+- 2025-04-07 (5h) Kept on debugging code for codebuild to work also got the website to up and runnning with AWS, used route 53 to buy domain name. 
+- 2025-04-08 (0.5h) took some time to update documents and update images for website and titles. 
 
 ## Cost Analysis
 
