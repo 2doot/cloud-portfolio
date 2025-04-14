@@ -89,6 +89,7 @@ For palce holder images I use this website to generate images out:
 - 2025-03-31 (4h) Getting my Codebuild CFN code to execute, had to implement secrets and credentials, spend a ton of time debugging Github Pemissions and fixing code.
 - 2025-04-07 (5h) Kept on debugging code for codebuild to work also got the website to up and runnning with AWS, used route 53 to buy domain name. 
 - 2025-04-08 (0.5h) took some time to update documents and update images for website and titles. 
+- 2025-04-14 (0.25h) Just improving the image of the website and making it it more secure by converting it from http to https
 
 ## Cost Analysis
 
